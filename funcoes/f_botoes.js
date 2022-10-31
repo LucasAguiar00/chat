@@ -164,5 +164,5 @@ function transferir(){
     var area_transferencia = navigator.clipboard.readText();
     area_transferencia = String(area_transferencia)
     a = area_transferencia //dsadsa
-    window.alert(a)
+    window.alert('teste')
 }
