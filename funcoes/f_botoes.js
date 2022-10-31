@@ -157,7 +157,9 @@ function copiar(){
 }
 
 
-// Função copiar
+// Função transferir
+import { clipboard } from '@bumble/clipboard'
+
 function transferir(){
     var area_transferencia = navigator.clipboard.readText();
     area_transferencia = String(area_transferencia)
