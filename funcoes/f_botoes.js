@@ -161,5 +161,6 @@ function copiar(){
 function transferir(){
     var area_transferencia = navigator.clipboard.readText();
     area_transferencia = String(area_transferencia)
-    window.alert("teste")
+    a = 'teste'
+    window.alert(a)
 }
