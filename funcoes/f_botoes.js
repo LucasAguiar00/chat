@@ -157,12 +157,22 @@ function copiar(){
 }
 
 
-// Função transferir
-import { clipboard } from '@bumble/clipboard'
-
+// Função copiar
 function transferir(){
-    var area_transferencia = navigator.clipboard.readText();
+    var area_transferencia
+    area_transferencia = navigator.clipboard.readText()
     area_transferencia = String(area_transferencia)
-    a = area_transferencia //dsadsa
-    window.alert('teste')
+    window.alert(area_transferencia)
 }
+
+/** Read from clipboard when clicking the Paste button 
+document.querySelector('#transferir').addEventListener('click', () => {
+    navigator.clipboard.readText()
+      .then(text => {
+        document.querySelector('#out').value = text;
+        ChromeSamples.log('Text pasted.');
+      })
+      .catch(() => {
+        ChromeSamples.log('Failed to read from clipboard.');
+      });
+  }); */
