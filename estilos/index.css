@@ -11,6 +11,34 @@
 
 }
 
+footer{
+    font-size: 12pt;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#novo{
+    margin: 10px;
+    position: absolute;
+    right: 0%;
+    width: 100px;
+}
+
+#fechar{
+    margin: 10px;
+    position: absolute;
+    left: 0%;
+    width: 100px;
+}
+
+#notificacao{
+    margin: 30px;
+}
 
 #protocolo_chat{
     font-size: 12pt;
@@ -76,4 +104,21 @@
     text-align: center;
     left: 40%;
 
+}
+
+
+#btn_atalhos{    
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.btn_atalho{
+    width: 700px;    
+}
+
+.btn_atalho2{
+    width: 345px; 
 }

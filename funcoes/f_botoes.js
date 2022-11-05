@@ -160,8 +160,13 @@ function copiar(){
 // Função copiar
 function transferir(){
     var area_transferencia
-    area_transferencia = navigator.clipboard.readText()
-    area_transferencia = String(area_transferencia)
+    var data
+    navigator.clipboard.readText().then(function(data) {        
+        console.log("Your string: ", data);
+      });
+  
+
+    area_transferencia = String(data)
     window.alert(area_transferencia)
 }
 
@@ -176,3 +181,65 @@ document.querySelector('#transferir').addEventListener('click', () => {
         ChromeSamples.log('Failed to read from clipboard.');
       });
   }); */
+
+
+
+// FUNÇAO BOTÕES DE ATALHO
+
+function atalho1() {
+
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_atalho1');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atalho copiado com sucesso!</strong> </div>'
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 2000);
+}
+
+
+
+function atalho2() {
+
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_atalho2');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atalho copiado com sucesso!</strong> </div>'
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 2000);
+}
+
+
+
+function atalho3() {
+
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_atalho3');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atalho copiado com sucesso!</strong> </div>'
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 2000);
+}

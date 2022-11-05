@@ -32,7 +32,9 @@
 
 <body style="background-color: rgb(53, 54, 63);">  <!-- rgb(40,42,54) --> 
 
-    <header>
+    <header>        
+        <button type="button" id="fechar" class="btn btn-danger" onclick="javascript:window.close()">Fechar</button>
+        <a href="index.html" target="_blank" id="novo"><button type="button" class="btn btn-success">Nova Aba</button></a>
         <br>
         <div id="notificacao"></div>
         <br>
@@ -74,10 +76,25 @@
             <button type="button" id="Apagar" class="btn btn-warning" onclick="Apagar()">Apagar</button>
         </div>
 
-
     </div>
 
-    <script src="funcoes/f_botoes.js"></script>
+    <section>
+        <div id="btn_atalhos">
+            <div id="btn_funcoes"> 
+                <button type="button" id="" class="btn btn-secondary btn_atalho2" onclick="">CPF</button> 
+                <button type="button" id="" class="btn btn-secondary btn_atalho2" onclick="">LGPD</button>  
+            </div> <br>
+            <div> <button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho1()">Atalho 1</button> </div> <br>
+            <div> <button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho2()">Atalho 2</button> </div> <br>
+            <div> <button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho3()">Atalho 3</button> </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="config.html" target="_blank">Configurar Atalhos</a>
+    </footer>
+
+    <script src="funcoes/f_botoes.js" ></script>
 
 </body>
 
