@@ -123,7 +123,7 @@ function copiar(){
     
     // Coletando a data atual para registrar no protocolo
     let data = new Date()
-    let dia = data.getUTCDate()
+    let dia = data.getUTCDate()-1 
     let mes = data.getUTCMonth()+1
     if (dia<10){
         dia = String(dia)
@@ -157,30 +157,47 @@ function copiar(){
 }
 
 
-// Função copiar
-function transferir(){
-    var area_transferencia
-    var data
-    navigator.clipboard.readText().then(function(data) {        
-        console.log("Your string: ", data);
-      });
-  
+// Função CPF
+function x(){
 
-    area_transferencia = String(data)
-    window.alert(area_transferencia)
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_cpf');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
 }
 
-/** Read from clipboard when clicking the Paste button 
-document.querySelector('#transferir').addEventListener('click', () => {
-    navigator.clipboard.readText()
-      .then(text => {
-        document.querySelector('#out').value = text;
-        ChromeSamples.log('Text pasted.');
-      })
-      .catch(() => {
-        ChromeSamples.log('Failed to read from clipboard.');
-      });
-  }); */
+function cpf_corrigir(){
+    var cpf = document.getElementById("btn_cpf").innerText
+    if (cpf==""){
+        document.getElementById("btn_cpf").innerText = "CPF"
+    }
+}
+
+function cpf(){
+
+    navigator.clipboard
+    .readText()
+    .then((clipText) => (document.getElementById("btn_cpf").innerText = clipText));
+    
+    // Essa função é executada após 0,1s
+    setTimeout(function(){
+        // Cria a variável cpf
+        var cpf = document.getElementById("btn_cpf").innerText
+    
+        // Deixa apenas os números no CPF
+        cpf = cpf.replace(/[^0-9]/g,'')
+        cpf = String(cpf)
+        
+        // Deixa o CPF corrigido no título do botão
+        document.getElementById("btn_cpf").innerText = cpf
+
+        // Salva o CPF corrigido no localStorage, para ser copiado em outra função
+        localStorage.setItem('txt_cpf', cpf)        
+   },100);
+   
+}
 
 
 
@@ -242,4 +259,33 @@ function atalho3() {
             $(this).remove();
         });
     }, 2000);
+}
+
+
+
+function transferir(){
+    var area_transferencia
+    var data = navigator.clipboard.readText().then(function(dados) {        
+        // tenho que programar tudo dentro dessa função
+        console.log("Your string: ", dados);        
+        area_transferencia = String(dados)
+
+        //Remove as quebras de linha do texto
+        area_transferencia = area_transferencia.replace(/(\r\n|\n|\r)/gm, "");
+        //window.alert(area_transferencia)
+
+        var protocolo_chat = window.document.getElementById("protocolo_chat")
+        var nome_cliente = window.document.getElementById("nome_cliente")
+        var telefone = window.document.getElementById("telefone")
+
+        var p_nome = dados.search("Nome:")
+        var p_telefone = dados.search("Telefone:")
+        var p_email = dados.search("E-mail:")
+        var p_numProtocolo = dados.search("Número de protocolo:")
+        var p_classificacao = dados.search("Classificação:")
+
+        nome_cliente.value = (dados.substring(p_nome+6,p_telefone)).replace("?","")
+        telefone.value = (dados.substring(p_telefone+12,p_email)).replace(/[^0-9]/g,'')
+        protocolo_chat.value = (dados.substring(p_numProtocolo+20,p_classificacao)).replace(/[^0-9]/g,'')
+    });  
 }
