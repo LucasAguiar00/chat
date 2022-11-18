@@ -25,6 +25,17 @@ function mudar_titulo(){
     }
 
     cpf_corrigir();
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    if (notificacao.innerHTML != '') {
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 1000);
+    }    
+
     
 }
 
