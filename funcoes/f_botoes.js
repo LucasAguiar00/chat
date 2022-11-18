@@ -6,7 +6,7 @@
 var protocolo_chat = window.document.getElementById("protocolo_chat")
 var protocolo_adm = window.document.getElementById("protocolo_adm")
 var nome_cliente = window.document.getElementById("nome_cliente")
-var telefone = window.document.getElementById("telefone")
+var telefone = window.document.getElementById("telefone")dasd 4423
 var bfp = window.document.getElementById("bfp")
 var descricao = window.document.getElementById("descricao")
 var h_preferencia = window.document.getElementById("h_preferencia")
@@ -23,6 +23,8 @@ function mudar_titulo(){
     if (nome_cliente.value!=''){
         titulo.innerText = nome_cliente.value
     }
+
+    cpf_corrigir();
     
 }
 
@@ -90,7 +92,8 @@ function protocolo(){
     // Nessa parte do código ele ira criar uma variável "trecho", com o texto até a PONTO_OU_VIRGULA="."
     descricao_aux = descricao.value // pegando o valor
     let tamanho = descricao_aux.length // pegando o tamanho do "vetor"
-    let PONTO_OU_VIRGULA = "."
+    // let PONTO_OU_VIRGULA = "."
+    let PONTO_OU_VIRGULA = localStorage.getItem('txt_key_protocolo')
     let posi = 0
     var trecho = ""
     for (var i = 0; i < tamanho; i++){                     
@@ -218,7 +221,7 @@ function atalho1() {
         $(".alert").fadeTo(500, 0).slideUp(500, function () {
             $(this).remove();
         });
-    }, 2000);
+    }, 1000);
 }
 
 
@@ -238,7 +241,7 @@ function atalho2() {
         $(".alert").fadeTo(500, 0).slideUp(500, function () {
             $(this).remove();
         });
-    }, 2000);
+    }, 1000);
 }
 
 
@@ -258,9 +261,63 @@ function atalho3() {
         $(".alert").fadeTo(500, 0).slideUp(500, function () {
             $(this).remove();
         });
-    }, 2000);
+    }, 1000);
 }
 
+
+function atalho4() {
+
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_atalho4');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atalho copiado com sucesso!</strong> </div>'
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 1000);
+}
+
+function atalho5() {
+
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_atalho5');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atalho copiado com sucesso!</strong> </div>'
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 1000);
+}
+
+function atalho6() {
+
+    // Pegando a informação do local Storage
+    var atalho = localStorage.getItem('txt_atalho6');
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(atalho)
+
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atalho copiado com sucesso!</strong> </div>'
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 1000);
+}
 
 
 function transferir(){
@@ -288,4 +345,17 @@ function transferir(){
         telefone.value = (dados.substring(p_telefone+12,p_email)).replace(/[^0-9]/g,'')
         protocolo_chat.value = (dados.substring(p_numProtocolo+20,p_classificacao)).replace(/[^0-9]/g,'')
     });  
+}
+
+
+function fun_h_preferencia(){
+    var hpfr = window.document.getElementById("hpfr")
+    var h_preferencia = window.document.getElementById("h_preferencia").value
+    
+    
+    if (h_preferencia == "Outro"){
+        hpfr.innerHTML = `<input type="input" id="h_preferencia2" Placeholder="Digite aqui o horário...">`
+        
+    }
+
 }

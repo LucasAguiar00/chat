@@ -1,3 +1,4 @@
+/*
 //  Função Máscara para o número de contato
 function mascara(o,f){
     v_obj=o
@@ -29,7 +30,8 @@ window.onload = function(){
     id('tel4').onkeyup = function(){
 		mascara( this, mtel );
 	}
-}
+}*/
+
 
 
 function copiar(){
@@ -39,7 +41,7 @@ function copiar(){
     var tel4 = document.getElementById("tel4").value
     var email = document.getElementById("email").value
 
-    var texto_completo = `Por gentileza, confirme seu e-mail e verifique se o(s) seguinte(s) número(s) permanecem para contato: ` 
+    var texto_completo = `No seu cadastro constam as seguintes informações para contato:\nDeseja alterar algum contato?` 
     //deseja remover ou adicionar algum contato?
     
     var DDD
@@ -49,57 +51,57 @@ function copiar(){
     if (tel1!=""){
         tel = tel1
         tamanho = tel.length
-        if (tamanho==15){   
-            DDD = tel.substring(0,4)
-            contato = tel.substring(10,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} X XXXX${contato}`
+        if (tamanho==11){   
+            DDD = tel.substring(0,2)
+            contato = tel.substring(7,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) X XXXX-${contato}`
         }else{
-            DDD = tel.substring(0,4)
-            contato = tel.substring(9,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} XXXX${contato}`
+            DDD = tel.substring(0,2)
+            contato = tel.substring(6,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) XXXX-${contato}`
         }                
     }
 
     if (tel2!=""){
         tel = tel2
         tamanho = tel.length
-        if (tamanho==15){   
-            DDD = tel.substring(0,4)
-            contato = tel.substring(10,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} X XXXX${contato}`
+        if (tamanho==11){   
+            DDD = tel.substring(0,2)
+            contato = tel.substring(7,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) X XXXX-${contato}`
         }else{
-            DDD = tel.substring(0,4)
-            contato = tel.substring(9,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} XXXX${contato}`
-        }                
+            DDD = tel.substring(0,2)
+            contato = tel.substring(6,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) XXXX-${contato}`
+        }                 
     }
 
     if (tel3!=""){
         tel = tel3
         tamanho = tel.length
-        if (tamanho==15){   
-            DDD = tel.substring(0,4)
-            contato = tel.substring(10,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} X XXXX${contato}`
+        if (tamanho==11){   
+            DDD = tel.substring(0,2)
+            contato = tel.substring(7,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) X XXXX-${contato}`
         }else{
-            DDD = tel.substring(0,4)
-            contato = tel.substring(9,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} XXXX${contato}`
-        }                
+            DDD = tel.substring(0,2)
+            contato = tel.substring(6,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) XXXX-${contato}`
+        }                 
     }
 
     if (tel4!=""){
         tel = tel4
         tamanho = tel.length
-        if (tamanho==15){   
-            DDD = tel.substring(0,4)
-            contato = tel.substring(10,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} X XXXX${contato}`
+        if (tamanho==11){   
+            DDD = tel.substring(0,2)
+            contato = tel.substring(7,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) X XXXX-${contato}`
         }else{
-            DDD = tel.substring(0,4)
-            contato = tel.substring(9,tamanho)
-            texto_completo = texto_completo + `\n ${DDD} XXXX${contato}`
-        }                
+            DDD = tel.substring(0,2)
+            contato = tel.substring(6,tamanho)
+            texto_completo = texto_completo + `\n (${DDD}) XXXX-${contato}`
+        }                 
     }
 
 
@@ -112,7 +114,7 @@ function copiar(){
 
     }
 
-    texto_completo = texto_completo + `\nDeseja remover ou adicionar algum contato?`
+    //texto_completo = texto_completo + `\nDeseja remover ou adicionar algum contato?`
 
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(texto_completo)    
