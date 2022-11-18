@@ -6,7 +6,7 @@
 var protocolo_chat = window.document.getElementById("protocolo_chat")
 var protocolo_adm = window.document.getElementById("protocolo_adm")
 var nome_cliente = window.document.getElementById("nome_cliente")
-var telefone = window.document.getElementById("telefone")dasd 4423
+var telefone = window.document.getElementById("telefone")
 var bfp = window.document.getElementById("bfp")
 var descricao = window.document.getElementById("descricao")
 var h_preferencia = window.document.getElementById("h_preferencia")
