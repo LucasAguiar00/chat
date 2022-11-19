@@ -157,3 +157,13 @@ footer{
 #btn_atalhos .col{
     padding: 8px;
 }
+
+
+#timer{    
+    color: white;
+    text-align: center;
+
+    margin: 0px;
+    position: absolute;
+    left: 30%;
+}
