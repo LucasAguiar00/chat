@@ -17,6 +17,25 @@ var b_copiar = window.document.getElementById("Copiar")
 var b_tranferir = window.document.getElementById("Transferir")
 var b_apagar = window.document.getElementById("Apagar")
 
+// COPIA O PROTOCOLO DO ADM AO CLICAR
+function copiar_protocolo_adm(){
+    
+    if (protocolo_adm.value != "") {
+        // Passando as informações para a área de transferência
+        navigator.clipboard.writeText(protocolo_adm.value);
+
+        // Exibindo a notificação de texto copiado por 2 segundos
+        let notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = '<div class="alert alert-secondary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Protocolo do ADM copiado com sucesso!</strong> </div>'
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 1000);
+    }
+
+}
+
 // Mudar o titulo
 function mudar_titulo(){
     var titulo = window.document.getElementById("titulo")
