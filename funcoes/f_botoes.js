@@ -30,14 +30,14 @@ function mudar_titulo(){
     let notificacao = document.getElementById("notificacao")
     if (notificacao.innerHTML != '') {
         window.setTimeout(function () {
-            $(".alert").fadeTo(500, 0).slideUp(500, function () {
-                $(this).remove();
-            });
-        }, 1000);
+            notificacao.innerHTML = ""
+        }, 5000);
     }    
 
     
 }
+
+
 
 //  Função Apagar
 //      Questiona se o usuário deseja apagar.
@@ -93,6 +93,12 @@ window.onload = function(){
 	id('telefone').onkeyup = function(){
 		mascara( this, mtel );
 	}
+}
+
+window.onmousemove = function(){
+    id('telefone').onkeyup = function(){
+		mascara( this, mtel );
+	}    
 }
 
 

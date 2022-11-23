@@ -39,6 +39,17 @@ footer{
     width: 100px;
 }
 
+#modelos{
+    margin: 10px;
+    width: 300px;
+    
+    position: absolute;
+    left: 50%;
+    top: 02%;
+    transform: translate(-50%, -50%);
+    
+}
+
 #fechar{
     margin: 10px;
     position: absolute;
