@@ -32,6 +32,13 @@ footer{
     transform: translate(-50%, -50%);*/
 }
 
+#link_atalho_chat{
+    position: absolute;
+    left: 95%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+}
+
 #novo{
     margin: 10px;
     position: absolute;
