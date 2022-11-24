@@ -207,6 +207,15 @@ function x(){
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(atalho)
 
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-dark" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF COPIADO COM SUCESSO!</strong></div>'
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 2000);
+
 }
 
 function cpf_corrigir(){
