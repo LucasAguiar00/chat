@@ -176,8 +176,10 @@ function copiar(){
     
     // Condição em caso de VS
     // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
-    if (ponto_referencia.value!=h_preferencia.value){
-        var texto_vs = `<hr> Horário de preferência: ${h_preferencia.value} <br> Ponto de referência: ${ponto_referencia.value} <hr>`
+    
+    var h_preferencia = window.document.getElementById("h_preferencia")
+    if (ponto_referencia.value!=h_preferencia.value){                
+        var texto_vs = `<hr> <b>Horário de preferência:</b> ${h_preferencia.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
         texto_completo = texto_completo + texto_vs
     }
 
@@ -390,7 +392,7 @@ function fun_h_preferencia(){
     
     
     if (h_preferencia == "Outro"){
-        hpfr.innerHTML = `<input type="input" id="h_preferencia2" Placeholder="Digite aqui o horário...">`
+        hpfr.innerHTML = `<input type="input" id="h_preferencia" Placeholder="Digite aqui o horário...">`
         
     }
 
