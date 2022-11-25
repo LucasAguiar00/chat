@@ -110,7 +110,7 @@ function fun_sup_oscilação (){
 
 
 function fun_sup_reinicio (){
-    descricao.value += `Foi solicitado o reinício dos equipamentos. `
+    descricao.value += `Feito o reinício da conexão via sistema e solicitado o reinício manual dos equipamentos. `
 }
 function fun_sup_checagem_cabos (){
     descricao.value += `Realizado a checagem dos cabos nos dispositivos. `
@@ -120,7 +120,7 @@ function fun_sup_teste_de_velocidade(){
 }
 
 function fun_sup_conexao_normalizada (){
-    descricao.value += `\n\nConexão normaliza. `
+    descricao.value += `\n\nConexão normalizada. `
 }
 function fun_sup_envio_de_vs (){
     descricao.value += `\n\nEncaminhado para verificação técnica no local, ciente do prazo de até três dias úteis para ocorrer.`
