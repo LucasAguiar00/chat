@@ -1,6 +1,6 @@
 <!-- 
     //Autor: Lucas Aguiar
-    //Ultima edição: 15/11/2022
+    //Ultima edição: 25/11/2022
 -->
 
 
@@ -56,50 +56,51 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <strong>Equipamentos Ópticos</strong> <br>
-                    <button onclick="fun_Fiberhome()">Fiberhome</button>
-                    <button onclick="fun_ONU_NOKIA()">ONU NOKIA</button>
-                    <button onclick="fun_Conversor_NOKIA()">Conversor NOKIA</button>
-                    <button onclick="fun_Datacom()">Datacom</button>
+                <div class="modal-body" id="botoes_auto_preenchidos">
+                    <strong>Equipamentos Ópticos</strong> <br>                    
+                    <button class="btn btn-outline-dark" id="fun_Fiberhome" onclick="fun_Fiberhome()">Fiberhome</button>
+                    <button class="btn btn-outline-dark" id="fun_Datacom" onclick="fun_Datacom()">Datacom</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_ONU_NOKIA" onclick="fun_ONU_NOKIA()">ONU NOKIA</button>
+                    <button class="btn btn-outline-dark" id="fun_Conversor_NOKIA" onclick="fun_Conversor_NOKIA()">Conversor NOKIA</button>
+                    
 
                     <hr><strong>Suporte</strong> <br>
-                    <button onclick="fun_sup_falta_de_conexao()">Falta de conexão</button>
-                    <button onclick="fun_sup_lentidao()">Lentidão</button>
-                    <button onclick="fun_sup_oscilação()">Oscilação</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()">Falta de conexão</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_lentidao" onclick="fun_sup_lentidao()">Lentidão</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_oscilação" onclick="fun_sup_oscilação()">Oscilação</button>
                     <br> <br>
-                    <button onclick="fun_sup_reinicio()">Reinício</button>
-                    <button onclick="fun_sup_checagem_cabos()">Checagem de cabo</button>
-                    <button onclick="fun_sup_teste_de_velocidade()">Teste de velocidade</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_reinicio" onclick="fun_sup_reinicio()">Reinício</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()">Checagem de cabo</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_teste_de_velocidade" onclick="fun_sup_teste_de_velocidade()">Teste de velocidade</button>
                     <br> <br>
-                    <button onclick="fun_sup_conexao_normalizada()">Conexão normalizada</button>
-                    <button onclick="fun_sup_envio_de_vs()">Envio de VS</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_conexao_normalizada" onclick="fun_sup_conexao_normalizada()">Conexão normalizada</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_envio_de_vs" onclick="fun_sup_envio_de_vs()">Envio de VS</button>
 
                     <hr><strong>Serviços</strong> <br>
-                    <button onclick="fun_Montagem_de_Rede()">Montagem de rede</button> <br>
-                    <button onclick="fun_Mudanca_de_comodo()">Mudança de cômodo</button>
-                    <button onclick="fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
-                    <button onclick="fun_Transferência_de_endereço()">Transf. de endereço</button>
-                    <button onclick="fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_Montagem_de_Rede" onclick="fun_Montagem_de_Rede()">Montagem de rede</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()">Mudança de cômodo</button>
+                    <button class="btn btn-outline-dark" id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()">Transf. de endereço</button>
+                    <button class="btn btn-outline-dark" id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
                     
                     <hr><strong>Financeiro</strong> <br>
-                    <button onclick="fun_desb3001()">Desbl. 3001 disponível</button>
-                    <button onclick="fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
-                    <button onclick="fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
-                    <button onclick="fun_bloqueio_verde()">Bloqueio verde</button>
-                    <button onclick="fun_bloqueio_azul()">Bloqueio azul</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_desb3001" onclick="fun_desb3001()">Desbl. 3001 disponível</button>
+                    <button class="btn btn-outline-dark" id="fun_desb3001_indisp" onclick="fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_desb3001_pag_efetuado" onclick="fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_bloqueio_verde" onclick="fun_bloqueio_verde()">Bloqueio verde</button>
+                    <button class="btn btn-outline-dark" id="fun_bloqueio_azul" onclick="fun_bloqueio_azul()">Bloqueio azul</button> <br>
 
                     <hr><strong>Alteração de senha wi-fi</strong> <br>
-                    <button onclick="fun_senha_wifi_ip()">Pelo IP de acesso</button>
-                    <button onclick="fun_senha_wifi_app()">Pelo aplicativo</button>
+                    <button class="btn btn-outline-dark" id="fun_senha_wifi_ip" onclick="fun_senha_wifi_ip()">Pelo IP de acesso</button>
+                    <button class="btn btn-outline-dark" id="fun_senha_wifi_app" onclick="fun_senha_wifi_app()">Pelo aplicativo</button>
 
                     <hr><strong>Cancelamento e Troca de titularidade</strong> <br>
-                    <button onclick="fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
-                    <button onclick="fun_can_com_pendencia()">Cadastro com pendências</button> <br>
-                    <button onclick="fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
-                    <button onclick="fun_troca_titularidade()">Troca de titularidade</button> <br>
-
+                    <button class="btn btn-outline-dark" id="fun_can_titular" onclick="fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()">Cadastro com pendências</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
+                    <button class="btn btn-outline-dark" id="fun_troca_titularidade" onclick="fun_troca_titularidade()">Troca de titularidade</button> <br>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                 </div>
@@ -204,7 +205,7 @@
 
         <footer>
             <a href="config.html" target="_blank">CONFIGURAÇÕES</a> <br>            
-            Versão: 1.1.9
+            Versão: 1.1.10
         </footer>
 
     </div>
