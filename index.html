@@ -134,7 +134,7 @@
                     </div>
 
                     <div id="vs">
-                        Horário de preferência:
+                        <span id="t1">Horário de preferência:</span>
                         <span id="hpfr" onchange="fun_h_preferencia()">
                             <select id="h_preferencia" onchange="fun_h_preferencia()">                            
                                 <option></option>                        
@@ -145,7 +145,7 @@
                             </select>
                         </span>                    
                         <br>
-                        Ponto de referência:
+                        <span id="t2">Ponto de referência:</span>                        
                         <input type="search" id="ponto_referencia">
                     </div>
                     <br>
@@ -203,16 +203,22 @@
         </div>
         
 
-        <footer>
+        <footer id="foot">
             <a href="config.html" target="_blank">CONFIGURAÇÕES</a> <br>            
-            Versão: 1.1.10
+            Versão: 1.1.11
         </footer>
 
     </div>
     
     <span>
+        <button onclick="mudar_tema()" id="tema" type="button" class="btn btn btn-light" data-toggle="tooltip" data-placement="top" title="Mudar tema" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button> <br>
         <a href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share" target="_blank" id="link_atalho_chat"><button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Clique aqui para ver a lista de atalhos do Omini" >#</button></a>
     </span>
+    
 
     <script src="funcoes/f_botoes.js"></script>
     <script src="funcoes/alarmes.js"></script>

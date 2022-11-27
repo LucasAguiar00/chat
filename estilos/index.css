@@ -5,7 +5,6 @@
     transform: translate(-50%, -50%);
 }
 
-
 #celula_atd_1{
     font-size: 12pt;
     color: white;
@@ -38,6 +37,15 @@ footer{
     top: 95%;
     transform: translate(-50%, -50%);
 }
+
+#tema{
+    position: absolute;
+    left: 95%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 #novo{
     margin: 10px;

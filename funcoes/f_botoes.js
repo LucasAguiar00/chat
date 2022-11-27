@@ -44,6 +44,7 @@ function mudar_titulo(){
     }
 
     cpf_corrigir();
+    tema_change();
 
     // Exibindo a notificação de texto copiado por 2 segundos
     let notificacao = document.getElementById("notificacao")
@@ -403,6 +404,59 @@ function fun_h_preferencia(){
     if (h_preferencia == "Outro"){
         hpfr.innerHTML = `<input type="input" id="h_preferencia" Placeholder="Digite aqui o horário...">`
         
+    }
+
+}
+
+
+function mudar_tema(){
+    btn_tema = document.getElementById("tema")
+    t1 = document.getElementById("t1")
+    t2 = document.getElementById("t2")
+    foot = document.getElementById("foot")
+    var tema = localStorage.getItem('tema')
+
+    if (btn_tema.className == "btn btn btn-dark"){        
+        localStorage.setItem('tema', "tema_claro")
+        btn_tema.className = "btn btn btn-light"
+        document.body.style.background = "#35363f"        
+        t1.style.color = "white"
+        t2.style.color = "white"
+        foot.style.color = "white"   
+    }else{
+        localStorage.setItem('tema', "tema_escuro")          
+        btn_tema.className = "btn btn btn-dark"        
+        document.body.style.background = "#BDC3C7" //Cinza
+        t1.style.color = "black"
+        t2.style.color = "black"
+        foot.style.color = "black"   
+    }
+}
+
+
+
+
+function tema_change(){
+    btn_tema = document.getElementById("tema")
+    t1 = document.getElementById("t1")
+    t2 = document.getElementById("t2")
+    foot = document.getElementById("foot")
+    var tema = localStorage.getItem('tema')
+    //alert(tema)
+    if (tema=="tema_escuro"){
+        btn_tema.className = "btn btn btn-dark"        
+        document.body.style.background = "#BDC3C7" //Cinza
+        t1.style.color = "black"
+        t2.style.color = "black"
+        foot.style.color = "black"     
+    } else {     
+        btn_tema.className = "btn btn btn-dark"        
+        btn_tema.className = "btn btn btn-light"
+        document.body.style.background = "#35363f"        
+        t1.style.color = "white"
+        t2.style.color = "white"
+        foot.style.color = "white"       
+
     }
 
 }
