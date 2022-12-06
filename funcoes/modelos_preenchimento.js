@@ -284,3 +284,270 @@ function fun_troca_titularidade (){
 
 }
 
+//------------------------------------------------------
+//Problemas na conexão
+//------------------------------------------------------
+
+function fun_nao_repassou_cpf (){
+    meu_id = window.document.getElementById("fun_nao_repassou_cpf")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão, porém não soube repassar o CPF do titular da conta. Solicitado novo contato. Sem mais dúvidas.`
+
+}
+
+function fun_normalizada_sem_procedimento (){
+    meu_id = window.document.getElementById("fun_normalizada_sem_procedimento")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão. Durante o atendimento, a conexão foi normalizada sem a necessidade de realizar os procedimentos padrões. Ciente que deve monitorar o acesso e que se o problema persistir, poderá ser feito novo contato. Sem mais dúvidas.`
+
+}
+
+function fun_recusa_procedimento (){
+    meu_id = window.document.getElementById("fun_recusa_procedimento")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão. Ao solicitar a realização de procedimentos padrão (reinício e verificação de cabos), afirmou que não tem interesse em realizá-los e solicitou visita técnica. Encaminhado para verificação técnica no local, ciente do prazo de até três dias úteis para ocorrer.`
+
+}
+
+function fun_ip_de_bloqueio (){
+    meu_id = window.document.getElementById("fun_ip_de_bloqueio")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão após o pagamento da pendência. Identificado IP de bloqueio. Feito o reinício dos dispositivos e verificação de cabos. Conexão normalizada. Ciente de que se o problema persistir, poderá ser feito novo contato. Sem mais dúvidas.`
+
+}
+
+function fun_prob_ext_conclusao (){
+    meu_id = window.document.getElementById("fun_prob_ext_conclusao")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão. Identificado problema externo. Instruído a aguardar o reparo técnico ocorrer. Sem mais dúvidas.\n\n[Mensagem sobre o problema externo informado pela monitoria / supervisão].`
+
+}
+
+function fun_prob_ext_suporte (){
+    meu_id = window.document.getElementById("fun_prob_ext_suporte")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão. Identificado problema externo. Instruído a aguardar o reparo técnico ocorrer e ciente de que será feito posterior contato após a normalização. Ligar no nº XXXXXXXXXXX - falar com Sr.(a) XXXXXXXXXX. Sem mais dúvidas. \n\n[Mensagem sobre o problema externo informado pela monitoria / supervisão].`
+
+}
+
+function fun_nao_esta_no_local (){
+    meu_id = window.document.getElementById("fun_nao_esta_no_local")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de conexão, porém não está no local de instalação. Solicitado novo contato quando estivesse no local.`
+
+}
+
+//------------------------------------------------------
+//Problemas na conexão
+//------------------------------------------------------
+
+function fun_tv_normalizado (){
+    meu_id = window.document.getElementById("fun_tv_normalizado")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de acesso na TV Faster. Foram realizados procedimentos de reinício e verificação de cabos do STB e dos equipamentos de fibra. Conexão não normalizada. Verificado com o Rodrigo Fragoso. Conexão normalizada. Ciente que deve monitorar o acesso e que se o problema persistir, poderá ser feito novo contato. Sem mais dúvidas.\n\n[Cópia da conversa via Spark com o Rodrigo Fragoso].`
+
+}
+
+function fun_tv_nao_normalizado (){
+    meu_id = window.document.getElementById("fun_tv_nao_normalizado")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de acesso na TV Faster. Foram realizados procedimentos de reinício e verificação de cabos do STB e dos equipamentos de fibra. Verificado com o Rodrigo Fragoso. Conexão não normalizada. Encaminhado para verificação técnica no local, ciente do prazo de até três dias úteis para ocorrer.\n\n[Cópia da conversa via Spark com o Rodrigo Fragoso].`
+
+}
+
+function fun_tv_normalizado_sem_verificacao (){
+    meu_id = window.document.getElementById("fun_tv_normalizado_sem_verificacao")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata falta de acesso na TV Faster. Foram realizados procedimentos de reinício e verificação de cabos. Conexão normalizada. Ciente que deve monitorar o acesso e que se o problema persistir, poderá ser feito novo contato. Sem mais dúvidas.`
+
+}
+
+
+
+//------------------------------------------------------
+//Informação sobre visita técnica
+//------------------------------------------------------
+
+function fun_dentro_do_prazo_vs (){
+    meu_id = window.document.getElementById("fun_dentro_do_prazo_vs")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informação sobre a visita técnica referente ao protocolo [número do protocolo]. Instruído a aguardar a visita ocorrer, uma vez que está dentro do prazo máximo. Sem mais dúvidas.`
+
+}
+
+
+function fun_fora_do_prazo_vs (){
+    meu_id = window.document.getElementById("fun_fora_do_prazo_vs")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informação sobre a visita técnica referente ao protocolo [número do protocolo]. Instruído a aguardar a visita ocorrer, uma vez que o escritório local afirma que ocorrerá no dia de XX/XX. <hr>\n\n<b> [Verificação com o escritório local] </b>:`
+
+}
+
+function fun_escritorio_indisp (){
+    meu_id = window.document.getElementById("fun_escritorio_indisp")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informação sobre a visita técnica referente ao protocolo [número do protocolo]. Escritório indisponível para verificação. Solicitado posterior contato após às XX h, pois o escritório estará disponível. Sem mais dúvidas.`
+
+}
+
+function fun_cancelamento_vs (){
+    meu_id = window.document.getElementById("fun_cancelamento_vs")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita o cancelamento da visita [número do protocolo], pois informou que o acesso normalizou. Feito o cancelamento e repassado para o cliente. Sem mais dúvidas.`
+
+}
+
+
+//------------------------------------------------------
+//Informação sobre pendências
+//------------------------------------------------------
+
+function fun_pendencias_atraso (){
+    meu_id = window.document.getElementById("fun_pendencias_atraso")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente entrou em contato solicitando informações sobre pendências de boletos. Repassadas as informações sobre os valores e taxas, e as datas referentes aos meses de pendências. Sem mais dúvidas.\n\n<b> Pendências em atraso:</b>`
+
+}
+
+function fun_negociacao_pendencias (){
+    meu_id = window.document.getElementById("fun_negociacao_pendencias")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita negociação das pendências. Ciente de que tal verificação deverá ser feita diretamente no escritório local ou via e-mail pelo (atendimentofinanceiro@fasternet.com.br). Ciente dos valores e prazos das pendências em atraso, assim como das formas de pagamento disponíveis. Sem mais dúvidas.`
+
+}
+
+function fun_pag_duplicado (){
+    meu_id = window.document.getElementById("fun_pag_duplicado")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente relata pagamento em duplicidade. Colhidos os comprovantes e enviado o caso para o setor financeiro via e-mail solicitando a verificação dos pagamentos. Cliente informado que o caso está sob análise, e que será feito um contato posterior quando for obtido resposta pelo setor responsável. Sem mais dúvidas. <hr>\n\n[Registrar cópia do e-mail enviado]`
+
+}
+
+function fun_data_vencimento (){
+    meu_id = window.document.getElementById("fun_data_vencimento")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita alteração da data de vencimento das faturas para o dia XX de cada mês. Instruído a fazer a devida alteração pelo site da empresa. Feito passo a passo. Sem mais dúvidas.`
+
+}
+
+function fun_formas_pagamento (){
+    meu_id = window.document.getElementById("fun_formas_pagamento")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informação sobre as formas de pagamento disponíveis. Ciente das informações, instruído a retirá-lo no site da empresa e pagar as pendências de forma on-line. Sem mais dúvidas.`
+
+}
+
+
+
+
+
+//------------------------------------------------------
+//Emissão de 2ª via da fatura
+//------------------------------------------------------
+
+function fun_instrucao_via_site (){
+    meu_id = window.document.getElementById("fun_instrucao_via_site")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita segunda via do boleto. Instruído a retirá-lo no site da empresa ou via whatsapp. Ciente do passo a passo a ser realizado e feita a atualização dos dados para contato. Sem mais dúvidas.`
+
+}
+
+function fun_via_sms (){
+    meu_id = window.document.getElementById("fun_via_sms")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita segunda via do boleto. Enviado link da fatura por SMS através do ADM, ciente do passo a passo a ser realizado . Sem mais dúvidas.`
+
+}
+
+
+function fun_nota_fical (){
+    meu_id = window.document.getElementById("fun_nota_fical")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita segunda via da nota fiscal referente ao mês XX. Instruído a retirá-lo no site da empresa através da opção Painel de Controle. Ciente do passo a passo a ser realizado e feita a atualização dos dados para contato. Sem mais dúvidas.`
+
+}
+
+function fun_troca_plano (){
+    meu_id = window.document.getElementById("fun_troca_plano")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informações sobre troca de plano. Repassados os planos em catálogo para cliente. Orientado (a) a enviar um e-mail com a solicitação da troca para novoplano@fasternet.com.br ou solicitar presencialmente no escritório local.`
+
+}
+
+
+//------------------------------------------------------
+//SVA e TOKEN
+//------------------------------------------------------
+
+function fun_sva (){
+    meu_id = window.document.getElementById("fun_sva")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicitou informações sobre SVA’s inclusos no seu plano. Informado dos serviços adicionais disponíveis e repassado o passo a passo para ativação através do site da FasterNet. Sem mais dúvidas.`
+
+}
+
+function fun_token_fatura (){
+    meu_id = window.document.getElementById("fun_token_fatura")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+
+}
+
+function fun_token_sva (){
+    meu_id = window.document.getElementById("fun_token_sva")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+
+}
