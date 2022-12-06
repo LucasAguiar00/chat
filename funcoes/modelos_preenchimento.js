@@ -129,6 +129,33 @@ function fun_sup_envio_de_vs (){
 
 }
 
+function fun_ver_noc (){
+    meu_id = window.document.getElementById("fun_ver_noc")
+    //change_color(meu_id)
+    meu_id.className = "btn btn-info"
+
+    descricao.value += `\n\n<b>Verificação com o NOC:</b>\n[COLAR CONVERSA COM O NOC]`
+
+}
+
+function fun_ver_sup (){
+    meu_id = window.document.getElementById("fun_ver_sup")
+    //change_color(meu_id)
+    meu_id.className = "btn btn-info"
+
+    descricao.value += `\n\n<b>Verificação com a supervisão:</b>\n[COLAR CONVERSA COM A SUPERVISÃO]`
+
+}
+
+function fun_ver_escr (){
+    meu_id = window.document.getElementById("fun_ver_escr")
+    //change_color(meu_id)
+    meu_id.className = "btn btn-info"
+
+    descricao.value += `\n\n<b>Verificação com o escritório:</b>\n[COLAR CONVERSA COM O ESCRITÓRIO]`
+
+}
+
 
 //------------------------------------------------------
 // Serviços
