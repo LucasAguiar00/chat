@@ -73,12 +73,12 @@ footer{
 }
 
 #modelos_noc{
-    margin: 10px;
+    
     
     
     position: absolute;
-    left: 60%;
-    top: 02%;
+    left: 95%;
+    top: 85%;
     transform: translate(-50%, -50%);
     
 }
