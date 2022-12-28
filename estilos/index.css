@@ -18,6 +18,13 @@
 
 }
 
+.campo_preenchimento_ncc{
+    width: 230px;
+}
+
+.campo_preenchimento_ncc2{
+    width: 380px;
+}
 
 footer{
     font-size: 12pt;
@@ -60,6 +67,17 @@ footer{
     
     position: absolute;
     left: 50%;
+    top: 02%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#modelos_noc{
+    margin: 10px;
+    
+    
+    position: absolute;
+    left: 60%;
     top: 02%;
     transform: translate(-50%, -50%);
     

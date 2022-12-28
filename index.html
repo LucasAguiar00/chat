@@ -30,8 +30,14 @@
 
     <header>
         <button type="button" id="fechar" class="btn btn-danger" onclick="javascript:window.close()">Fechar</button>        
-
+    
         <button type="button" id="modelos" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> MODELOS DE PREENCHIMENTO </button>
+        <button type="button" id="modelos_noc" class="btn btn-warning" data-toggle="modal" data-target="#padrao_noc"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+              </svg>    
+        </button>
 
         <a href="index.html" target="_blank" id="novo"><button type="button" class="btn btn-success">Nova Aba</button></a>
         <div>
@@ -41,6 +47,36 @@
             
         </div>
     </header>
+
+
+    <!-- Modal TESTE -->
+    <div class="modal fade" id="padrao_noc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PADRÃO DE REPASSE NOC/MONITORIA</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">                    
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="FHTT/ALCL"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Usuário"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Cidade"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Autenticação"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Plano"> <br>
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Endereço"> <br>
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br>                    
+                </div>
+                <div class="modal-footer">                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" onclick="copiar_padrao()">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Button trigger modal -->
     
@@ -250,7 +286,7 @@
 
         <footer id="foot">
             <a href="config.html" target="_blank">CONFIGURAÇÕES</a> <br>            
-            Versão: 1.1.14
+            Versão: 1.1.15
         </footer>
 
     </div>
@@ -268,6 +304,7 @@
     <script src="funcoes/f_botoes.js"></script>
     <script src="funcoes/alarmes.js"></script>
     <script src="funcoes/modelos_preenchimento.js"></script>
+    <script src="funcoes/padrao_noc.js"></script>
     
 
 </body>
