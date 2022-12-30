@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="estilos/index.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
+
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -24,7 +25,7 @@
 
 
 </head>
-
+ 
 <body style="background-color: #35363f;" onmousemove="mudar_titulo()" id="corpo_tela_principal">
     <!-- rgb(40,42,54) -->
 
@@ -49,10 +50,40 @@
         </div>
     </header>
 
+    <!-- Modal Notificação de novidades -->
+    <div class="modal fade" id="notificacaoNovidades" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">
+                        Notificações
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                        </svg>                        
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">    
+                    <h5>Boas Festas!</h5> <br> 
+                    Somos privilegiados por contar com a sua <strong>confiança</strong>  e <strong>trabalho</strong>! <br>
+                    Desejamos um ano novo de muita esperança, paz e prosperidade! Esperamos que 2023 seja um ano próspero e muito abençoado para você e para a sua família!
+                    &#127870 &#127879	
+                    <hr>
+                    
+              
+                </div>
+                <div class="modal-footer">                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>        
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
-    <!-- Modal TESTE -->
-    <div class="modal fade" id="padrao_noc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
+    <!-- Modal PADRÃO NOC -->
+    <div class="modal fade" id="padrao_noc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">

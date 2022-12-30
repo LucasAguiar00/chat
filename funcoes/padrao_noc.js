@@ -10,3 +10,10 @@ function copiar_padrao(){
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(mensagem)
 }
+
+
+// A FUNÇAO ABAIXO EXIBE O MODAL ASSIM QUE A PÁGINA É CARREGADA
+window.addEventListener("load", (event) => {
+    $('#notificacaoNovidades').modal('show')
+});
+              
