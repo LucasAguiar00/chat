@@ -14,6 +14,6 @@ function copiar_padrao(){
 
 // A FUNÇAO ABAIXO EXIBE O MODAL ASSIM QUE A PÁGINA É CARREGADA
 window.addEventListener("load", (event) => {
-    $('#notificacaoNovidades').modal('show')
+   // $('#notificacaoNovidades').modal('show')
 });
               
