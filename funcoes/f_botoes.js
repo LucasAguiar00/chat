@@ -163,8 +163,8 @@ function copiar(){
     
     // Coletando a data atual para registrar no protocolo
     let data = new Date()
-    let dia = data.getUTCDate()-1
-    let mes = data.getUTCMonth()+1
+    let dia = data.getDate()
+    let mes = data.getMonth()+1
     if (dia<10){
         dia = String(dia)
         dia = '0'+dia
