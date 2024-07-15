@@ -1,16 +1,24 @@
 #Salvar{
-    position: absolute;
-    left: 90%;
-    top: 85%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    left: 80% !important;
+    bottom: 200px;
+    margin: 0 !important;
+    display: inline;
 }
 
-body{
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
+#sair{
+    position: relative;
+    left: 100%;
 }
+
+
+html, body{
+    width: 700px;
+    margin: auto;
+    display: block;
+}
+
+
 
 div{
     color: white;
@@ -71,6 +79,15 @@ h1{
 }
 
 #chave_p{
+    border: 2px solid;
+    border-color: #65707a;
+    width: 420px;
+    margin: auto 0% auto 0%;
+    padding: 10px;
+}
+
+
+.borda{
     border: 2px solid;
     border-color: #65707a;
     width: 420px;

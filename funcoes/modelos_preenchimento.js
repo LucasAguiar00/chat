@@ -7,7 +7,21 @@ function change_color(meu_id){
     elements.forEach(element => {
         if (element.id!="meu_id"){
             element.className = "btn btn-outline-dark"
-            console.log(element)
+        }
+                
+    });
+}
+
+
+
+function db_change_color(meu_id){
+    var divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
+    var db_elements =  divConteiner.querySelectorAll(`[id^="fun_"]`)
+    db_elements.forEach(element => {
+        if (element.id!="meu_id"){
+		console.log(meu_id)
+            element.className = "btn btn-outline-dark"
+            
         }
                 
     });
@@ -24,7 +38,7 @@ function fun_Fiberhome(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: On/Off\n• PON/LINK: On/Off/Piscando\n• LOS/Perda: Piscando/off`    
+    descricao.value += `\n\n<b>Fiberhome</b>\n• Power: On/Off\n• PON/LINK: On/Off/Piscando\n• LOS/Perda: Piscando/off`    
 
 }
 
@@ -33,7 +47,7 @@ function fun_ONU_NOKIA(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: Verde estático/vermelho estático/apagado \n• LINK: Verde estático/Apagado \n• AUTH: Verde estático/Verde Piscando/ Apagado`
+    descricao.value += `\n\n<b>ONU Nokia</b>\n• Power: Verde estático/vermelho estático/apagado \n• LINK: Verde estático/Apagado \n• AUTH: Verde estático/Verde Piscando/ Apagado`
 
 }
 
@@ -43,7 +57,7 @@ function fun_Conversor_NOKIA(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: Verde estático / Apagado \n• Alarm: vermelho estático/ Apagado \n• Connection: Verde estático / Verde Piscando /Apagado \n• ETH: Verde estático / Verde Piscando / Apagado`
+    descricao.value += `\n\n<b>Conversor Nokia</b>\n• Power: Verde estático / Apagado \n• Alarm: vermelho estático/ Apagado \n• Connection: Verde estático / Verde Piscando /Apagado \n• ETH: Verde estático / Verde Piscando / Apagado`
 
 }
 
@@ -52,7 +66,7 @@ function fun_Datacom(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: Verde estático/apagado \n• PON: Verde estático/apagado \n• ETH1: Verde estático/Verde Piscando/ Apagado`
+    descricao.value += `\n\n<b>Datacom</b>\n• Power: Verde estático/apagado \n• PON: Verde estático/apagado \n• ETH1: Verde estático/Verde Piscando/ Apagado`
 
 }
 
@@ -82,7 +96,7 @@ function fun_sup_oscilação (){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `Cliente relata oscilação. `
+    descricao.value += `Cliente relata quedas de conexão. `
 
 }
 
@@ -165,7 +179,7 @@ function fun_Montagem_de_Rede(){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita montagem de rede. <hr> Montagem de rede: R$ 105,00 \nNº de pontos adicionais: não informou \nValor pontos adicionais: X * R$ 35,00 \nConfiguração de roteador: (Sim R$ 35,00 / Não) \nValor total: R$ 105,00 + Valor pontos adc + Config. roteador. \nForma de pagamento: parcelamento em 4x. \n \nCliente ciente de que se a rede ultrapassar [(Nº pontos adicionais * 20m) + 20m], será cobrado R$ 3,00 por metro excedente. <hr> Encaminhado para verificação técnica no local, ciente do prazo de até sete dias úteis para ocorrer.`
+    descricao.value = `Cliente solicita montagem de rede interna. Ficou ciente do prazo máximo de 7 dias úteis para ocorrer.`
 
 }
 
@@ -174,33 +188,33 @@ function fun_Mudanca_de_comodo(){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer.`
+    descricao.value = `Cliente solicita mudança de cômodo. Ficou ciente do prazo máximo de 7 dias úteis para ocorrer.`
 
 }
-function fun_Mudanca_de_comodo_amparo(){
-    meu_id = window.document.getElementById("fun_Mudanca_de_comodo_amparo")
-    change_color(meu_id)
-    meu_id.className = "btn btn-danger"
+// function fun_Mudanca_de_comodo_amparo(){
+//     meu_id = window.document.getElementById("fun_Mudanca_de_comodo_amparo")
+//     change_color(meu_id)
+//     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (em parcela única), do prazo máximo de 7 dias úteis para ocorrer.`
+//     descricao.value = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (em parcela única), do prazo máximo de 7 dias úteis para ocorrer.`
 
-}
+// }
 function fun_Transferência_de_endereço(){
     meu_id = window.document.getElementById("fun_Transferência_de_endereço")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita transferência de endereço. Ciente do valor de R$ 50,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer, e que é necessário levar os dispositivos ao novo endereço. Cliente já está no novo endereço. \n<hr> <b> Novo endereço: </b>. \n<hr> Confirmada a disponibilidade de conexão no local por:\n`
+    descricao.value = `Cliente solicita transferência de endereço. Ficou ciente do prazo máximo de 7 dias úteis para ocorrer, e que é necessário levar os dispositivos ao novo endereço. Cliente já está no novo endereço. \n<hr> <b> Novo endereço: </b>. \n<hr> Confirmada a disponibilidade de conexão no local por:\n`
 
 }
-function fun_Transferência_de_endereço_amparo(){
-    meu_id = window.document.getElementById("fun_Transferência_de_endereço_amparo")
-    change_color(meu_id)
-    meu_id.className = "btn btn-danger"
+// function fun_Transferência_de_endereço_amparo(){
+//     meu_id = window.document.getElementById("fun_Transferência_de_endereço_amparo")
+//     change_color(meu_id)
+//     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita transferência de endereço. Ciente do valor de R$ 100,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer. Cliente já está no novo endereço. \n<hr> <b> Novo endereço:</b> \n<hr> Confirmado a disponibilidade de conexão no local por: \n`
+//     descricao.value = `Cliente solicita transferência de endereço. Ciente do valor de R$ 100,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer. Cliente já está no novo endereço. \n<hr> <b> Novo endereço:</b> \n<hr> Confirmado a disponibilidade de conexão no local por: \n`
 
-}
+// }
 
 
 
@@ -212,7 +226,7 @@ function fun_desb3001 (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente entrou em contato solicitando o desbloqueio da conexão, ciente dos valores em pendência assim como o prazo de 3 a 5 dias corridos do desbloqueio. Orientado a realizar o reinicio manual do equipamento durante 15 minutos. Sem mais dúvidas.\n\n<b>Pendências em atraso no sistema:</b>`
+    descricao.value = `Cliente entrou em contato solicitando o desbloqueio da conexão, ciente dos valores em pendência assim como o prazo de 3 a 5 dias corridos do desbloqueio. Orientado a realizar o reinicio manual do equipamento durante 15 minutos. Sem mais dúvidas.`
 
 }
 function fun_desb3001_indisp (){
@@ -220,7 +234,7 @@ function fun_desb3001_indisp (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita desbloqueio da conexão. Identificado bloqueio 3001. Ciente de que não é possível liberar o acesso em sistema, uma vez que já foi concedido o desbloqueio por 5 dias corridos. Repassados os valores atualizados e prazos das pendências, assim como as formas de pagamento disponíveis, sem mais dúvidas.\n\n<b>Pendências em atraso:</b>`
+    descricao.value = `Cliente solicita desbloqueio da conexão. Identificado bloqueio 3001. Ciente de que não é possível liberar o acesso em sistema, uma vez que já foi concedido o desbloqueio por 5 dias corridos. Repassados os valores atualizados e prazos das pendências, assim como as formas de pagamento disponíveis, sem mais dúvidas.`
 
 }
 function fun_desb3001_pag_efetuado (){
@@ -236,7 +250,7 @@ function fun_bloqueio_verde (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita desbloqueio da conexão. Identificado bloqueio verde. Ciente de que não é possível liberar o acesso em sistema e ciente dos valores atualizados e prazos das pendências. Repassadas as formas de pagamento disponíveis, sem mais dúvidas.\n\n<b>Pendências em atraso:</b>`
+    descricao.value = `Cliente solicita desbloqueio da conexão. Identificado bloqueio verde. Ciente de que não é possível liberar o acesso em sistema e ciente dos valores atualizados e prazos das pendências. Repassadas as formas de pagamento disponíveis, sem mais dúvidas.`
 
 }
 function fun_bloqueio_azul (){
@@ -244,7 +258,7 @@ function fun_bloqueio_azul (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita o bloqueio temporário da conexão. Ciente que o cadastro poderá ficar bloqueado por até 120 dias corridos e que o desbloqueio será automático. Repassado que para solicitar o bloqueio ele deve pagar todos as faturas em aberto no sistema e será gerada outra referente aos dias de uso até o data da solicitação. Ciente também que pode estar solicitando esse serviço no escritório local ou através do e-mail bloqueio@fasternet.com.br.`
+    descricao.value = `Cliente solicita o bloqueio temporário da conexão. Ciente que o cadastro ficará bloqueado por [QUANTIDADE DE DIAS 30, 60 90 OU 120] dias corridos e que o desbloqueio será automático.\nMotivo do bloqueio azul: motivos financeiros/ saúde/ reforma/ viagem.\nSolicitação realizada no formulário financeiro.`
 
 }
 
@@ -280,7 +294,7 @@ function fun_can_titular (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita cancelamento da conexão. Informado de que tal solicitação será repassada para o setor responsável, que fará posterior contato para fins de conclusão/negociação. Cliente ciente da solicitação em sistema, sem mais dúvidas. \n<b>Motivo do cancelamento: </b> <hr> \n<b>Ofertado: </b> XXXXXX <hr> \n<b> Verificação com a supervisão: </b>`
+    descricao.value = `Cliente solicita cancelamento da conexão. Não foi possível retê-lo com as ofertas disponíveis, então o atendimento foi transferido para o setor de retenção realizar a conclusão/negociação. Sem mais dúvidas. <hr>\n<b>Motivo do cancelamento:</b> XXX <hr> \n<b>Ofertado: </b> XXX <hr>`
 
 }
 
@@ -289,7 +303,7 @@ function fun_can_com_pendencia (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita cancelamento da assinatura. Ciente de que há pendências em atraso e que é necessário quitá-las para fazer o pedido de cancelamento por esse canal de atendimento. Repassada a possibilidade de efetuar o pedido diretamente no escritório munido dos equipamentos. Informados os valores e prazos atualizados com juros, assim como as formas de pagamento disponíveis. Sem mais dúvidas. \n<hr>Pendências em atraso:`
+    descricao.value = `Cliente solicita cancelamento da assinatura. Ciente de que há pendências em atraso e que é necessário quitá-las para fazer o pedido de cancelamento por esse canal de atendimento. Repassada a possibilidade de efetuar o pedido diretamente no escritório munido dos equipamentos. Informados os valores e prazos atualizados com juros, assim como as formas de pagamento disponíveis. Sem mais dúvidas.`
 
 }
 
@@ -307,7 +321,16 @@ function fun_troca_titularidade (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicitou informação sobre troca de titularidade. Repassado que o titular deve encaminhar o pedido para cancelamento@fasternet.com.br, no qual deve ser enviado também como cópia para o novo titular da conta. Caso não seja possível, pode ser solicitada no escritório local e é necessária a presença do atual e do novo titular, assim como a documentação de ambos.`
+    descricao.value = ` Cliente solicitou informação sobre troca de titularidade. O atendimento foi transferido para o setor de retenção realizar as tratativas.`
+
+}
+
+function fun_reativação (){
+    meu_id = window.document.getElementById("fun_reativação")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita a reativação do cadastro cancelado há menos de 15 dias. Atendimento transferido para o setor de retenção. Sem mais.`
 
 }
 
@@ -462,7 +485,7 @@ function fun_pendencias_atraso (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente entrou em contato solicitando informações sobre pendências de boletos. Repassadas as informações sobre os valores e taxas, e as datas referentes aos meses de pendências. Sem mais dúvidas.\n\n<b> Pendências em atraso:</b>`
+    descricao.value = `Cliente entrou em contato solicitando informações sobre pendências de boletos. Repassadas as informações sobre os valores e taxas, e as datas referentes aos meses de pendências. Sem mais dúvidas.`
 
 }
 
@@ -471,7 +494,7 @@ function fun_negociacao_pendencias (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita negociação das pendências. Ciente de que tal verificação deverá ser feita diretamente no escritório local ou via e-mail pelo (atendimentofinanceiro@fasternet.com.br). Ciente dos valores e prazos das pendências em atraso, assim como das formas de pagamento disponíveis. Sem mais dúvidas.`
+    descricao.value = `Cliente solicita negociação das pendências. Ciente de que tal verificação deverá ser feita diretamente no e-mail pelo (atendimentofinanceiro@fasternet.com.br). Ciente dos valores e prazos das pendências em atraso, assim como das formas de pagamento disponíveis.`
 
 }
 
@@ -543,7 +566,7 @@ function fun_troca_plano (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita informações sobre troca de plano. Repassados os planos em catálogo para cliente. Orientado (a) a enviar um e-mail com a solicitação da troca para novoplano@fasternet.com.br ou solicitar presencialmente no escritório local.`
+    descricao.value = `Cliente solicita troca de plano. Repassados os planos em catálogo, cliente solicitou a troca de plano para XXX MEGA por R$ XX,XX. Feito a solicitação via formulário. Ficou ciente de que serão geradas duas faturas de mensalidade no mês posterior, cada uma referente ao período proporcional de uso de cada plano, e que a fidelidade será renovada por mais 12 meses.`
 
 }
 
@@ -566,7 +589,7 @@ function fun_token_fatura (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+    descricao.value = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassado o Token ao cliente.`
 
 }
 
@@ -575,6 +598,141 @@ function fun_token_sva (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+    descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassado o Token ao cliente.`
 
 }
+
+
+
+
+//Estou adicionando funções a partir dessa linha
+//Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
+
+function getSavedAnswers( category ){    
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		 if (JSON.parse(this.responseText) != false ){
+			createAnswers( category,  JSON.parse(this.responseText)  );
+		}
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getAnswers", true);
+    xhttp.send();
+    
+	//return "3";
+}
+
+
+
+
+function getSavedCategory(){
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                if (JSON.parse(this.responseText) != false ){
+			getSavedAnswers( JSON.parse(this.responseText)  );
+		}
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
+    xhttp.send();
+ 
+}
+
+
+
+
+function createAnswers(category, anwers){
+        let divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0];
+	console.log( category)
+	console.log( anwers )
+	
+	
+	   if(category != false){
+		   category.forEach( (el)=>{
+			var strong = document.createElement("strong")
+			strong.innerHTML = el["category"]
+			var br = document.createElement("br")
+			var hr = document.createElement("hr")
+			
+			divConteiner.appendChild(br);
+			divConteiner.appendChild(strong);
+			divConteiner.appendChild(br);
+
+			   
+			   anwers.forEach( (el1) =>{
+			   	
+				 if(el1['category'] == el['category']){
+					 var label = document.createElement("label");
+					 label.innerHTML = `<textarea class='${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='fun_${el1['id']}' onclick="copy_answer( ${el1['id']}, '${el1['behavior']}' )" data-toggle="tooltip" title="${el1['answer'] }">  ${el1['title']} </button>` 
+					 divConteiner.appendChild(label);
+				 }  
+			   });
+			   
+			   divConteiner.appendChild(hr);
+		  
+		       //textArea.classList.add("txt-answers");	   			
+		   } );
+	  }
+} 
+
+
+
+getSavedCategory();
+
+
+//Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
+
+function copy_answer(id, db_behavior){
+    meu_id = window.document.getElementById("fun_" + id)
+    
+    if(db_behavior == "padrao_azul"){
+	    meu_id.className = "btn btn-info";
+	    descricao.value += document.getElementsByClassName(id)[0].value;
+    }
+    if(db_behavior == "padrao_vermelho"){
+	    db_change_color("fun_"+id)
+	    meu_id.className = "btn btn-danger";
+	    descricao.value = document.getElementsByClassName(id)[0].value;
+    }	
+    
+    
+}
+
+
+//Adicionar tags html na resposta
+function add_tag(tag){
+	let cursorPos = descricao.selectionStart;
+	const posicaoCursor = descricao.selectionStart;
+	const valorAntes = descricao.value.substring(0, posicaoCursor);
+	const valorDepois = descricao.value.substring(posicaoCursor);
+	const novoValor = valorAntes + `${tag}` + valorDepois;
+	descricao.value = novoValor;
+	cursorPos = (valorAntes + `${tag}`).length;
+	//descricao.value += `${tag}`;	
+}
+
+
+
+function enableTags(){
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		var tag_status = JSON.parse( this.responseText)
+		console.log( tag_status[0]['tags_enable'] );
+		if( tag_status[0]['tags_enable'] == "0" ){
+			document.getElementById("tags_html").className = "tags_hide";
+		}else{
+			document.getElementById("tags_html").className = "tags_show";
+		}
+		
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getTagsStatus", true);
+    xhttp.send();
+ 
+}
+
+enableTags();
+

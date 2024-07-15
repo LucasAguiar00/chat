@@ -35,6 +35,14 @@ window.onload = function(){
 
 
 function copiar(){
+    
+    // Apagando o histórico do alert
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML =""
+    
+    let notificacao2 = document.getElementById("notificacao2")
+    notificacao2.innerHTML =""
+
     var tel1 = document.getElementById("tel1").value
     var tel2 = document.getElementById("tel2").value
     var tel3 = document.getElementById("tel3").value
@@ -106,23 +114,43 @@ function copiar(){
     }
 
 
-    if (email!=""){
+    /*if (email!=""){*/
+    if (email.search('@')>=1){        
         tamanho = email.length
         var arroba = email.search('@')
         var email_novo = email.substring(0,2)+"********"+ email.substring(arroba,email.length)
         
         texto_completo = texto_completo + ` e ${email_novo}`
-
+    
     }
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
 
+    if (email.search('@')<=1){      
+        texto_completo = texto_completo + `\n\nIdentificamos que não há e-mail cadastrado em sistema, deseja adicionar algum?`    
+
+    }
+
+
+    if (email.search('hotmail')>=1){
+        //console.log('achou')                    
+        notificacao2.innerHTML += '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atenção!</strong> Cliente usa domínio @hotmail. </div>'
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 6000);
+        
+        texto_completo = texto_completo + `\n\nE-mails com domínio @hotmail, tem apresentado problemas para receber comunicados que enviamos. Você tem outro e-mail com domínio diferente?\nExemplo: @gmail, @yahoo, @icloud, etc. `
+    }
+
+    
+
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(texto_completo)    
 
-    // Exibindo a notificação de texto copiado por 2 segundos
-    let notificacao = document.getElementById("notificacao")
-    notificacao.innerHTML = '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
+    // Exibindo a notificação de texto copiado por 2 segundos    
+    notificacao.innerHTML += '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
     window.setTimeout(function() {
         $(".alert").fadeTo(500, 0).slideUp(500, function(){
             $(this).remove(); 
@@ -215,4 +243,17 @@ function retorna_contato(dados){
         var inicio = dados.search("DDD:")
         txt_tel4.value = (dados.substring(inicio+4,inicio+15)).replace(/[^0-9]/g,'')
 
+}
+
+
+function apagar(){
+    var elements1 = document.querySelectorAll(`[class^="campo_editavel"]`)
+
+    elements1.forEach(e => {
+        e.value=""
+        var notificacao2 = document.getElementById("notificacao2")
+        var notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = ""
+        notificacao2.innerHTML = ""
+    });
 }
