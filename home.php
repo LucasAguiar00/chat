@@ -1316,7 +1316,7 @@
                                         onchange="cpf_corrigir()">CPF ou CNPJ</button>
                                 </div>
                                 <div class="col">
-                                    <a href="LGPD.html" target="_blank"> <button type="button" id=""
+                                    <a href="LGPD.php" target="_blank"> <button type="button" id=""
                                             class="btn btn-secondary btn_atalho2" onclick="" data-toggle="tooltip"
                                             data-placement="top" title="Modelo automático LGPD">LGPD</button> </a>
                                 </div>

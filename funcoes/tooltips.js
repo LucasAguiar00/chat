@@ -171,6 +171,28 @@ function tooltips_fun_ver_escr (){
 
 }
 
+function tooltips_fun_ver_escr (){
+    meu_id = window.document.getElementById("fun_ver_escr")
+    //change_color(meu_id)
+    //meu_id.className = "btn btn-info"
+
+    var txt = `<b>Verificação com o escritório:</b>[COLAR CONVERSA COM O ESCRITÓRIO]`
+
+    meu_id.setAttribute("data-original-title",txt)
+
+}
+
+function tooltips_fun_ver_finan (){
+    meu_id = window.document.getElementById("fun_ver_finan")
+    //change_color(meu_id)
+    //meu_id.className = "btn btn-info"
+
+    var txt = `<b>Verificação com o financeiro:</b>[COLAR CONVERSA COM O ESCRITÓRIO]`
+
+    meu_id.setAttribute("data-original-title",txt)
+
+}
+
 
 //------------------------------------------------------
 // Serviços

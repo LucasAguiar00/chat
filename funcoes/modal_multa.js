@@ -106,16 +106,16 @@ function obterDiasNoMes(data) {
     data.setDate(data.getDate() + 1);
     
     var ano = data.getFullYear();
-    console.log(`Ano ${ano}`)
+    // console.log(`Ano ${ano}`)
     var mes = data.getMonth() + 1; // Mês é zero-indexado, então adicionar 1
-    console.log(`mes ${mes}`)
+    // console.log(`mes ${mes}`)
 
     // Cria uma nova data com o mês seguinte e o dia 0
     var proximoMes = new Date(ano, mes, 0);
-    console.log(`proximoMes ${proximoMes}`)
+    // console.log(`proximoMes ${proximoMes}`)
 
     // Retorna o último dia do mês, que é o número de dias no mês
-    console.log(`final ${proximoMes.getDate()}`)
+    // console.log(`final ${proximoMes.getDate()}`)
     return proximoMes.getDate();
 
 }
@@ -123,7 +123,7 @@ function obterDiasNoMes(data) {
 // Exemplo de uso
 var data = new Date('2024-06-17'); // 17 de junho de 2024
 var diasNoMes = obterDiasNoMes(data);
-console.log(diasNoMes); // Saída: 30, pois junho tem 30 dias
+// console.log(diasNoMes); // Saída: 30, pois junho tem 30 dias
 
 
 

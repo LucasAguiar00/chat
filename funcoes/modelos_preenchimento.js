@@ -170,6 +170,15 @@ function fun_ver_escr (){
 
 }
 
+function fun_ver_finan(){
+    meu_id = window.document.getElementById("fun_ver_finan")
+    //change_color(meu_id)
+    meu_id.className = "btn btn-info"
+
+    descricao.value += `\n\n<b>Verificação com o financeiro:</b>\n[COLAR CONVERSA COM O FINANCEIRO]`
+
+}
+
 
 //------------------------------------------------------
 // Serviços
@@ -675,6 +684,7 @@ function createAnswers(category, anwers){
 		       //textArea.classList.add("txt-answers");	   			
 		   } );
 	  }
+      scroollspy_modelo_pessoais()
 } 
 
 

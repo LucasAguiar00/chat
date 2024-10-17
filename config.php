@@ -281,7 +281,7 @@
         <input type="radio" id="html" name="enable_tag" value="1">
         <label for="css">Desabilitar tags</label>
         <input type="radio" id="css" name="enable_tag" value="0">
-            <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
+            <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 24%; ">
         </form>
     </div>   	
 
@@ -294,7 +294,7 @@
         <input type="radio" id="html" name="enable_tag" value="1">
         <label for="css">Desabilitar link CPF</label>
         <input type="radio" id="css" name="enable_tag" value="0">
-            <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
+            <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 11%; ">
         </form>
     </div>  
 
@@ -304,8 +304,8 @@
 
 	
 
-    <div id="cadastrar_resposta">
-	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
+    <div id="cadastrar_resposta">	
+        <span id="titulo" style=" position: relative; left: 16%; ">  CADASTRAR MODELO DE RESPOSTA   </span><br> <br>
 	    <form method="post" action="./app.php?action=setModelAnswer">
 		<label>Categoria*: </label>
 	    	<select name="lista_de_titulos_usuario" required id="select_lista_categoria">
